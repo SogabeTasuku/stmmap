@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+	<script type="text/javascript" src="../js/front.js"></script>
+	<link rel="stylesheet" href="../css/front.css">
+	<title>お手軽カラーコード君</title>
+</head>
+<body>
+	<h1>お手軽カラーコード君</h1>
+	<div>使い方</div>
+	<div>１.取得したいカラーコードのボタンを押してください。</div>
+	<div>２.コピーを実行したいテキストの「コピー」ボタンを押してください。</div>
+	<div>３.コピーしたカラーコードをソースコードなどに張り付けて使用してください。</div>
+	<table>
+		<tbody>
+			<tr>
+				<td>
+					<input type="text" name="name" class="text" id="text1" disabled>
+					<input type="button" value="コピー" class="copy" id="copy1" onclick="clickCopy('text1')">
+				</td>
+				<td>
+					<input type="text" name="name" class="text" id="text2" disabled>
+					<input type="button" value="コピー" class="copy" id="copy2" onclick="clickCopy('text2')">
+				</td>
+				<td>
+					<input type="text" name="name" class="text" id="text3" disabled>
+					<input type="button" value="コピー" class="copy" id="copy3" onclick="clickCopy('text3')">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="flexBox">
+		<input type="button" value="#000000" class="flexItem_1" onclick="clickCss(this.value)">
+		<input type="button" value="#8A0808" class="flexItem_1" onclick="clickCss(this.value)">
+		<input type="button" value="#8A4B08" class="flexItem_1" onclick="clickCss(this.value)">
+		<input type="button" value="#868A08" class="flexItem_1" onclick="clickCss(this.value)">
+		<input type="button" value="#088A08" class="flexItem_1" onclick="clickCss(this.value)">
+		<input type="button" value="#088A85" class="flexItem_1" onclick="clickCss(this.value)">
+		<input type="button" value="#08088A" class="flexItem_1" onclick="clickCss(this.value)">
+		<input type="button" value="#6A0888" class="flexItem_1" onclick="clickCss(this.value)">
+	</div>
+	<div class="flexBox">
+		<input type="button" value="#1C1C1C" class="flexItem_2" onclick="clickCss(this.value)">
+		<input type="button" value="#B40404" class="flexItem_2" onclick="clickCss(this.value)">
+		<input type="button" value="#B45F04" class="flexItem_2" onclick="clickCss(this.value)">
+		<input type="button" value="#AEB404" class="flexItem_2" onclick="clickCss(this.value)">
+		<input type="button" value="#04B404" class="flexItem_2" onclick="clickCss(this.value)">
+		<input type="button" value="#04B4AE" class="flexItem_2" onclick="clickCss(this.value)">
+		<input type="button" value="#0404B4" class="flexItem_2" onclick="clickCss(this.value)">
+		<input type="button" value="#8904B1" class="flexItem_2" onclick="clickCss(this.value)">
+	</div>
+	<div class="flexBox">
+		<input type="button" value="#424242" class="flexItem_3" onclick="clickCss(this.value)">
+		<input type="button" value="#DF0101" class="flexItem_3" onclick="clickCss(this.value)">
+		<input type="button" value="#DF7401" class="flexItem_3" onclick="clickCss(this.value)">
+		<input type="button" value="#D7DF01" class="flexItem_3" onclick="clickCss(this.value)">
+		<input type="button" value="#01DF01" class="flexItem_3" onclick="clickCss(this.value)">
+		<input type="button" value="#01DFD7" class="flexItem_3" onclick="clickCss(this.value)">
+		<input type="button" value="#0101DF" class="flexItem_3" onclick="clickCss(this.value)">
+		<input type="button" value="#A901DB" class="flexItem_3" onclick="clickCss(this.value)">
+	</div>
+	<div class="flexBox">
+		<input type="button" value="#6E6E6E" class="flexItem_4" onclick="clickCss(this.value)">
+		<input type="button" value="#FF0000" class="flexItem_4" onclick="clickCss(this.value)">
+		<input type="button" value="#FF8000" class="flexItem_4" onclick="clickCss(this.value)">
+		<input type="button" value="#FFFF00" class="flexItem_4" onclick="clickCss(this.value)">
+		<input type="button" value="#00FF00" class="flexItem_4" onclick="clickCss(this.value)">
+		<input type="button" value="#00FFFF" class="flexItem_4" onclick="clickCss(this.value)">
+		<input type="button" value="#0000FF" class="flexItem_4" onclick="clickCss(this.value)">
+		<input type="button" value="#BF00FF" class="flexItem_4" onclick="clickCss(this.value)">
+	</div>
+	<div class="flexBox">
+		<input type="button" value="#A4A4A4" class="flexItem_5" onclick="clickCss(this.value)">
+		<input type="button" value="#FE2E2E" class="flexItem_5" onclick="clickCss(this.value)">
+		<input type="button" value="#FE9A2E" class="flexItem_5" onclick="clickCss(this.value)">
+		<input type="button" value="#F7FE2E" class="flexItem_5" onclick="clickCss(this.value)">
+		<input type="button" value="#2EFE2E" class="flexItem_5" onclick="clickCss(this.value)">
+		<input type="button" value="#2EFEF7" class="flexItem_5" onclick="clickCss(this.value)">
+		<input type="button" value="#2E2EFE" class="flexItem_5" onclick="clickCss(this.value)">
+		<input type="button" value="#CC2EFA" class="flexItem_5" onclick="clickCss(this.value)">
+	</div>
+	<div class="flexBox">
+		<input type="button" value="#D8D8D8" class="flexItem_6" onclick="clickCss(this.value)">
+		<input type="button" value="#FA5858" class="flexItem_6" onclick="clickCss(this.value)">
+		<input type="button" value="#FAAC58" class="flexItem_6" onclick="clickCss(this.value)">
+		<input type="button" value="#F4FA58" class="flexItem_6" onclick="clickCss(this.value)">
+		<input type="button" value="#58FA58" class="flexItem_6" onclick="clickCss(this.value)">
+		<input type="button" value="#58FAF4" class="flexItem_6" onclick="clickCss(this.value)">
+		<input type="button" value="#5858FA" class="flexItem_6" onclick="clickCss(this.value)">
+		<input type="button" value="#D358F7" class="flexItem_6" onclick="clickCss(this.value)">
+	</div>
+	<div class="flexBox">
+		<input type="button" value="#F2F2F2" class="flexItem_7" onclick="clickCss(this.value)">
+		<input type="button" value="#F78181" class="flexItem_7" onclick="clickCss(this.value)">
+		<input type="button" value="#F7BE81" class="flexItem_7" onclick="clickCss(this.value)">
+		<input type="button" value="#F3F781" class="flexItem_7" onclick="clickCss(this.value)">
+		<input type="button" value="#81F781" class="flexItem_7" onclick="clickCss(this.value)">
+		<input type="button" value="#81F7F3" class="flexItem_7" onclick="clickCss(this.value)">
+		<input type="button" value="#8181F7" class="flexItem_7" onclick="clickCss(this.value)">
+		<input type="button" value="#DA81F5" class="flexItem_7" onclick="clickCss(this.value)">
+	</div>
+	<div class="flexBox">
+		<input type="button" value="#FFFFFF" class="flexItem_8" onclick="clickCss(this.value)">
+		<input type="button" value="#F5A9A9" class="flexItem_8" onclick="clickCss(this.value)">
+		<input type="button" value="#F5D0A9" class="flexItem_8" onclick="clickCss(this.value)">
+		<input type="button" value="#F2F5A9" class="flexItem_8" onclick="clickCss(this.value)">
+		<input type="button" value="#A9F5A9" class="flexItem_8" onclick="clickCss(this.value)">
+		<input type="button" value="#A9F5F2" class="flexItem_8" onclick="clickCss(this.value)">
+		<input type="button" value="#A9A9F5" class="flexItem_8" onclick="clickCss(this.value)">
+		<input type="button" value="#E2A9F3" class="flexItem_8" onclick="clickCss(this.value)">
+	</div>
+</body>
+</html>
