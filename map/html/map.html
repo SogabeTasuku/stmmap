@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyAPggR6p__IQt-bL-pMxJ9Wb987XYuTitg&language=ja"></script>
     <script type="text/javascript" src="../js/front.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script> -->
     <link rel="stylesheet" href="../css/front.css">
 
     <style>
@@ -17,7 +18,11 @@
 </head>
 
 <body>
-    <div class=""><button class="search" type="button" aria-haspopup="menu" aria-label="" onclick="clickSearch('current')"><span class="">🔍現在地から検索</span></button></div>
+    <div class="">
+        <button class="search" type="button" aria-haspopup="menu" aria-label="" onclick="clickSearch('current')">
+            <span class="">🔍現在地から検索</span>
+        </button>
+    </div>
     <select name="">
         <option value="都道府県">都道府県</option>
         <option value="東京都">東京都</option>
@@ -28,8 +33,13 @@
         <option value="市区町村">市区町村</option>
         <option value="千代田区">千代田区</option>
     </select>
-    <div class=""><button class="search" type="button" aria-haspopup="menu" aria-label="" onclick="clickSearch('normal')"><span class="">検索</span></button></div>
-<div id="map" style="display: none;"></div>
+    <div class="">
+        <button class="search" type="button" aria-haspopup="menu" aria-label="" onclick="clickSearch('normal')">
+            <span class="">検索</span>
+        </button>
+    </div>
+<!-- <div id="map" style="display: none;"></div> -->
+<div id="map"></div>
 <div style="display: none;"></div>
 <div style="display: none;"></div>
 
