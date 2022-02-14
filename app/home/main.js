@@ -75,6 +75,26 @@ window.onload = function() {
 	// 		console.log(status);
 	// 	}
 	// });
+
+	const express = require('express');
+	const router = express.Router();
+
+	const db = require('../db/db');
+
+	router.get('/', (req, res, next) => {
+		db.pool.connect((err, client) => {
+			if (err) {
+				console.log(err);
+			} else {
+				client.query('SELECT * FROM hotelmap', (err, result) => {
+					console.log(result.rows);
+				});
+			}
+		});
+		res.render('index', {
+			title: 'hello express',
+		});
+	});
 }
 
 var markerData = [ // マーカーを立てる場所名・緯度・経度
