@@ -1,4 +1,4 @@
-const pg = require('pg');
+const { pg } = require('pg');
 require('dotenv').config();
 
 exports.pool = pg.Pool ({
