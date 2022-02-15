@@ -75,26 +75,40 @@ window.onload = function() {
 	// 		console.log(status);
 	// 	}
 	// });
+	
+	// const express = require('express');
+	// const { pg } = require('pg');
+	// require('dotenv').config();
 
-	const express = require('express');
-	const router = express.Router();
-
-	const db = require('../db/db');
-
-	router.get('/', (req, res, next) => {
-		db.pool.connect((err, client) => {
-			if (err) {
-				console.log(err);
-			} else {
-				client.query('SELECT * FROM hotelmap', (err, result) => {
-					console.log(result.rows);
-				});
-			}
-		});
-		res.render('index', {
-			title: 'hello express',
-		});
+	const connection = new Client({
+		connectionString: process.env.DATABASE_URL,  //DB情報を環境変数DATABASE_URLに変更
+		host: process.env.ENV_HOST,
+		database: process.env.ENV_DB,
+		user: process.env.ENV_USER,
+		port: 5432,
+		password: process.env.ENV_PASSWORD,
 	});
+	var test = 0;
+
+	// const express = require('express');
+	// const router = express.Router();
+
+	// const db = require('../db/db');
+
+	// router.get('/', (req, res, next) => {
+	// 	db.pool.connect((err, client) => {
+	// 		if (err) {
+	// 			console.log(err);
+	// 		} else {
+	// 			client.query('SELECT * FROM hotelmap', (err, result) => {
+	// 				console.log(result.rows);
+	// 			});
+	// 		}
+	// 	});
+	// 	res.render('index', {
+	// 		title: 'hello express',
+	// 	});
+	// });
 }
 
 var markerData = [ // マーカーを立てる場所名・緯度・経度
