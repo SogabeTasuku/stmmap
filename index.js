@@ -6,6 +6,7 @@ const pool = new Pool({
 });
 
 get('/db', async (req, res) => {
+	console.log("はろー、のーどじぇいえす！");
     try {
       const client = await pool.connect()
       const result = await client.query('SELECT * FROM hotelmap');
