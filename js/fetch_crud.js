@@ -34,6 +34,7 @@ postBtn.addEventListener('click', createFetch, false);
 
 // Read
 const readFetch = () => {
+    const express = require('express');
     fetch(url).then((response) => {
         if(!response.ok) {
             console.log('Read error!');
