@@ -76,20 +76,20 @@ window.onload = function() {
 	// 	}
 	// });
 	
-	const express = require('express');
-	// const express = require('../../node_modules/express');
-	const { pg } = require('pg');
-	require('dotenv').config();
+	// const express = require('express');
+	// // const express = require('../../node_modules/express');
+	// const { pg } = require('pg');
+	// require('dotenv').config();
 
-	const connection = new Client({
-		connectionString: process.env.DATABASE_URL,  //DB情報を環境変数DATABASE_URLに変更
-		host: process.env.ENV_HOST,
-		database: process.env.ENV_DB,
-		user: process.env.ENV_USER,
-		port: 5432,
-		password: process.env.ENV_PASSWORD,
-	});
-	var test = 0;
+	// const connection = new Client({
+	// 	connectionString: process.env.DATABASE_URL,  //DB情報を環境変数DATABASE_URLに変更
+	// 	host: process.env.ENV_HOST,
+	// 	database: process.env.ENV_DB,
+	// 	user: process.env.ENV_USER,
+	// 	port: 5432,
+	// 	password: process.env.ENV_PASSWORD,
+	// });
+	// var test = 0;
 
 	// const express = require('express');
 	// const router = express.Router();
@@ -151,6 +151,7 @@ function clickSearch(type) {
 	if(type == "current") {
 		currentSearch();
 	}
+	test();
 }
 
 function currentSearch() {
