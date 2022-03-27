@@ -4,7 +4,7 @@ const mysql = require('mysql');
 const tableName = 'hotelInfo';
 
 // Create Connection
-const connection = mysql.createConnection({
+const pool = mysql.createPool({
     // host: 'localhost',
     // user: 'root',
     // password: 'stm12345' // depends to the user
@@ -14,23 +14,16 @@ const connection = mysql.createConnection({
     database: 'heroku_93d37b1e950623e'
 });
 
-// Connect Function
-connection.connect((error) => {
-    if (error) {
-        console.error('Database Connect Error:' + error);
-        return;
-    } else {
-        console.log('Database Connection Success: id=' + connection.threadId);
-    }
-});
-
-// Initializing Database
-// connection.query('CREATE DATABASE IF NOT EXISTS ??;', databaseName);
-// connection.query('USE ??;', databaseName);
-connection.query('CREATE TABLE IF NOT EXISTS ??(id INT AUTO_INCREMENT PRIMARY KEY NOT NULL, name TEXT, lat TEXT, lng TEXT, url TEXT);', tableName);
-connection.query('SHOW FIELDS FROM ??;', tableName, (error, response) => {
-    console.log(response);
+pool.getConnection(function(err, connection){
+    connection.query('CREATE TABLE IF NOT EXISTS hotelInfo(id INT AUTO_INCREMENT PRIMARY KEY NOT NULL, name TEXT, lat TEXT, lng TEXT, url TEXT);', function(err, rows, fields){
+        if(err){
+            console.error('Database Connect Error:' + error);
+            throw err;
+        } else {
+            console.log('Database Connection Success');
+        }
+    });
 });
 
 // Export Connection
-module.exports = connection;
+module.exports = pool;
