@@ -27,16 +27,21 @@
             <th>緯度</th>
             <td><input type="text" name="latitude" class="check" value=""></td>
           </tr>
+          <tr id="latErrArea" style="display: none;">
+            <td></td>
+            <td colspan="2"><span class="errMsg">半角小数を入力してください。</span></td>
+          </tr>
           <tr>
             <th>経度</th>
             <td><input type="text" name="longitude" class="check" value=""></td>
           </tr>
+          <tr id="lngErrArea" style="display: none;">
+            <td></td>
+            <td colspan="2"><span class="errMsg">半角小数を入力してください。</span></td>
+          </tr>
           <tr>
             <th>ホームページURL</th>
             <td><textarea name="hpUrl" class="check" cols="22" rows="5"></textarea></td>
-          </tr>
-          <tr id="errArea" style="display: none;">
-            <td colspan="2"><span class="errMsg">緯度／経度には半角小数を入力してください。</span></td>
           </tr>
           <tr>
             <td></td>
